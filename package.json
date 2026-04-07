@@ -1,0 +1,13 @@
+{
+  "name": "alphabr",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "ky": "^2.0.0"
+  }
+}

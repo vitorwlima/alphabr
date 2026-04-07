@@ -9,7 +9,7 @@ const BASE_URLS = {
 const START_YEAR = 2010;
 const CURRENT_YEAR = new Date().getFullYear();
 
-const DATA_DIR = path.resolve(__dirname, "./data/cvm/raw");
+const DATA_DIR = path.resolve(__dirname, "./data/cvm-raw");
 
 const downloadFile = async (url: string, outputPath: string) => {
   const response = await ky.get(url, {
@@ -25,7 +25,7 @@ const processYear = async (type: "ITR" | "DFP", year: number) => {
   const baseUrl = BASE_URLS[type];
 
   const url = `${baseUrl}/${fileName}`;
-  const outputPath = path.join(DATA_DIR, type.toLowerCase(), fileName);
+  const outputPath = path.join(DATA_DIR, fileName);
 
   const isCurrentYear = year === CURRENT_YEAR;
   const exists = await Bun.file(outputPath).exists();

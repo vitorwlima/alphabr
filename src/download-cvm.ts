@@ -1,5 +1,6 @@
 import ky from "ky";
 import path from "path";
+import { CVM_RAW_DIR } from "./paths";
 
 const BASE_URLS = {
   ITR: "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS",
@@ -8,8 +9,6 @@ const BASE_URLS = {
 
 const START_YEAR = 2010;
 const CURRENT_YEAR = new Date().getFullYear();
-
-const DATA_DIR = path.resolve(__dirname, "./data/cvm-raw");
 
 const downloadFile = async (url: string, outputPath: string) => {
   const response = await ky.get(url, {
@@ -25,7 +24,7 @@ const processYear = async (type: "ITR" | "DFP", year: number) => {
   const baseUrl = BASE_URLS[type];
 
   const url = `${baseUrl}/${fileName}`;
-  const outputPath = path.join(DATA_DIR, fileName);
+  const outputPath = path.join(CVM_RAW_DIR, fileName);
 
   const isCurrentYear = year === CURRENT_YEAR;
   const exists = await Bun.file(outputPath).exists();

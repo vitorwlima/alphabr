@@ -39,6 +39,9 @@ export function createTables(db: Database): void {
       fluxo_caixa_investimento   REAL,
       fluxo_caixa_financiamento  REAL,
 
+      -- Capital composition
+      shares_outstanding         REAL,
+
       PRIMARY KEY (cnpj, dt_fim_exerc, source_type, scope)
     );
 
@@ -74,5 +77,57 @@ export function createTables(db: Database): void {
     );
 
     CREATE INDEX IF NOT EXISTS idx_dp_date ON daily_prices (date);
+
+    CREATE TABLE IF NOT EXISTS company_metrics (
+      cnpj              TEXT NOT NULL,
+      dt_fim_exerc      TEXT NOT NULL,
+      scope             TEXT NOT NULL,
+      ticker_yahoo      TEXT,
+
+      -- Price data (quarter-end)
+      price_close       REAL,
+      price_date        TEXT,
+
+      -- Shares & market
+      shares_outstanding  REAL,
+      market_cap          REAL,
+      enterprise_value    REAL,
+
+      -- TTM income statement
+      receita_liquida_ttm     REAL,
+      resultado_bruto_ttm     REAL,
+      ebit_ttm                REAL,
+      lucro_liquido_ttm       REAL,
+
+      -- TTM cash flow
+      fluxo_caixa_op_ttm      REAL,
+
+      -- Valuation ratios
+      pl_ratio          REAL,  -- P/L (P/E)
+      pvp_ratio         REAL,  -- P/VP (P/B)
+      ev_ebit           REAL,  -- EV/EBIT
+      price_to_sales    REAL,  -- P/Receita
+
+      -- Profitability ratios
+      roe               REAL,  -- Return on Equity
+      roa               REAL,  -- Return on Assets
+      margem_liquida    REAL,  -- Net margin
+      margem_bruta      REAL,  -- Gross margin
+      margem_ebit       REAL,  -- EBIT margin
+
+      -- Balance sheet ratios
+      liquidez_corrente REAL,  -- Current ratio
+      divida_liquida_ebit REAL, -- Net debt / EBIT
+
+      -- Return (next quarter forward return for backtesting)
+      return_1q         REAL,
+      return_date_start TEXT,
+      return_date_end   TEXT,
+
+      PRIMARY KEY (cnpj, dt_fim_exerc, scope)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_cm_date ON company_metrics (dt_fim_exerc);
+    CREATE INDEX IF NOT EXISTS idx_cm_ticker ON company_metrics (ticker_yahoo);
   `);
 }

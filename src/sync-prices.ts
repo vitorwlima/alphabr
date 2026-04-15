@@ -2,7 +2,8 @@ import YahooFinance from "yahoo-finance2";
 import { openDatabase } from "./db/connection";
 import { createTables } from "./db/schema";
 
-const yahooFinance = new YahooFinance({ logger: { info: () => {}, warn: () => {}, error: () => {}, debug: () => {} } });
+const noop = () => {};
+const yahooFinance = new YahooFinance({ logger: { info: noop, warn: noop, error: noop, debug: noop, dir: noop } });
 
 const START_DATE = "2010-01-01";
 

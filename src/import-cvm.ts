@@ -8,6 +8,10 @@ import {
   parseFinancialCsv,
   type AccountEntry,
 } from "./parsers/financial-data";
+import { parseCsv } from "./parsers/csv";
+
+const COMPOSICAO_RE =
+  /^(dfp|itr)_cia_aberta_composicao_capital_(\d{4})\.csv$/;
 
 const DIR_RE = /^(dfp|itr)_cia_aberta_(\d{4})$/;
 
@@ -122,7 +126,8 @@ async function main() {
       passivo_total, passivo_circulante, passivo_nao_circulante, patrimonio_liquido,
       receita_liquida, custo_bens_servicos, resultado_bruto, ebit,
       resultado_financeiro, resultado_antes_tributos, lucro_liquido, lpa,
-      fluxo_caixa_operacional, fluxo_caixa_investimento, fluxo_caixa_financiamento
+      fluxo_caixa_operacional, fluxo_caixa_investimento, fluxo_caixa_financiamento,
+      shares_outstanding
     ) VALUES (
       $cnpj, $cd_cvm, $denom_cia, $dt_refer, $dt_fim_exerc, $dt_ini_exerc,
       $source_type, $scope, $source_year,
@@ -130,7 +135,8 @@ async function main() {
       $passivo_total, $passivo_circulante, $passivo_nao_circulante, $patrimonio_liquido,
       $receita_liquida, $custo_bens_servicos, $resultado_bruto, $ebit,
       $resultado_financeiro, $resultado_antes_tributos, $lucro_liquido, $lpa,
-      $fluxo_caixa_operacional, $fluxo_caixa_investimento, $fluxo_caixa_financiamento
+      $fluxo_caixa_operacional, $fluxo_caixa_investimento, $fluxo_caixa_financiamento,
+      $shares_outstanding
     )
   `);
 
@@ -152,6 +158,31 @@ async function main() {
 
     const files = readdirSync(dirPath).filter((f) => f.endsWith(".csv"));
     console.log(`Importing ${dir} (${files.length} files)...`);
+
+    // Parse composicao de capital files for shares outstanding
+    // Key: cnpj|dt_refer -> { version, shares }
+    const sharesMap = new Map<string, { version: number; shares: number }>();
+    for (const file of files) {
+      if (!COMPOSICAO_RE.test(file)) continue;
+      const filePath = path.join(dirPath, file);
+      const { headers, rows } = await parseCsv(filePath);
+      const col = Object.fromEntries(headers.map((h, i) => [h, i]));
+
+      for (const row of rows) {
+        const cnpj = row[col["CNPJ_CIA"]];
+        const dtRefer = row[col["DT_REFER"]];
+        const version = parseInt(row[col["VERSAO"]]);
+        const totalIntegr = parseFloat(row[col["QT_ACAO_TOTAL_CAP_INTEGR"]] || "0");
+        const totalTesouro = parseFloat(row[col["QT_ACAO_TOTAL_TESOURO"]] || "0");
+        const shares = totalIntegr - totalTesouro;
+
+        const key = `${cnpj}|${dtRefer}`;
+        const existing = sharesMap.get(key);
+        if (!existing || version > existing.version) {
+          sharesMap.set(key, { version, shares });
+        }
+      }
+    }
 
     // Phase 1: Collect all account entries and track max versions
     const maxVersions = new Map<string, number>(); // versionKey -> max version
@@ -258,6 +289,10 @@ async function main() {
             extract(a, "DFC_MI:6.02") ?? extract(a, "DFC_MD:6.02"),
           $fluxo_caixa_financiamento:
             extract(a, "DFC_MI:6.03") ?? extract(a, "DFC_MD:6.03"),
+
+          // Shares outstanding from composicao de capital
+          $shares_outstanding:
+            sharesMap.get(`${q.cnpj}|${q.dt_refer}`)?.shares ?? null,
         });
       }
 

@@ -1,11 +1,7 @@
-import YahooFinance from "yahoo-finance2";
 import { openDatabase } from "./db/connection";
 import { createTables } from "./db/schema";
-
-const noop = () => {};
-const yahooFinance = new YahooFinance({
-  logger: { info: noop, warn: noop, error: noop, debug: noop, dir: noop },
-});
+import { yahooFinance } from "./lib/yahoo";
+import { addDays } from "./lib/dates";
 
 /**
  * Backtesting engine for quantitative stock screening strategies.
@@ -107,8 +103,8 @@ function parseArgs() {
   };
 
   for (let i = 0; i < args.length; i += 2) {
-    const key = args[i].replace("--", "") as keyof typeof defaults;
-    const val = args[i + 1];
+    const key = args[i]!.replace("--", "") as keyof typeof defaults;
+    const val = args[i + 1]!;
     if (key === "top") {
       defaults.top = parseInt(val);
     } else if (key in defaults) {
@@ -171,7 +167,7 @@ async function main() {
   let benchmarkCumulative = 1.0;
 
   // For buy-and-hold benchmark: track price continuously (no gaps)
-  const firstEntryDate = addDays(rebalDates[0].dt_fim_exerc, 5);
+  const firstEntryDate = addDays(rebalDates[0]!.dt_fim_exerc, 5);
   let benchStartPrice = (
     priceAfter.get(config.benchmark, firstEntryDate) as {
       date: string;
@@ -180,8 +176,8 @@ async function main() {
   )?.adjusted_close ?? 0;
 
   for (let i = 0; i < rebalDates.length - 1; i++) {
-    const quarterEnd = rebalDates[i].dt_fim_exerc;
-    const nextQuarterEnd = rebalDates[i + 1].dt_fim_exerc;
+    const quarterEnd = rebalDates[i]!.dt_fim_exerc;
+    const nextQuarterEnd = rebalDates[i + 1]!.dt_fim_exerc;
 
     // Screen and rank stocks for this quarter
     const sql = `
@@ -292,8 +288,8 @@ async function main() {
   const totalReturn = portfolioCumulative - 1;
   const benchTotal = benchmarkCumulative - 1;
   const years =
-    (new Date(results[results.length - 1].dt_fim_exerc).getTime() -
-      new Date(results[0].dt_fim_exerc).getTime()) /
+    (new Date(results[results.length - 1]!.dt_fim_exerc).getTime() -
+      new Date(results[0]!.dt_fim_exerc).getTime()) /
     (365.25 * 24 * 60 * 60 * 1000);
 
   const cagr = Math.pow(portfolioCumulative, 1 / years) - 1;
@@ -345,12 +341,6 @@ async function main() {
   console.log(`  Years:          ${years.toFixed(1)}`);
 
   db.close();
-}
-
-function addDays(dateStr: string, days: number): string {
-  const d = new Date(dateStr);
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0, 10);
 }
 
 main().catch((err) => {

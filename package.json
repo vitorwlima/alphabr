@@ -2,16 +2,7 @@
   "name": "alphabr",
   "private": true,
   "scripts": {
-    "download": "bun src/download-cvm.ts",
-    "extract": "bun src/extract-cvm.ts",
-    "import": "bun src/import-cvm.ts",
-    "sync-tickers": "bun src/sync-tickers.ts",
-    "sync-prices": "bun src/sync-prices.ts",
-    "pipeline": "bun src/download-cvm.ts && bun src/extract-cvm.ts && bun src/import-cvm.ts",
-    "compute-metrics": "bun src/compute-metrics.ts",
-    "backtest": "bun src/backtest.ts",
-    "pipeline:prices": "bun src/sync-tickers.ts && bun src/sync-prices.ts",
-    "pipeline:metrics": "bun src/sync-tickers.ts && bun src/sync-prices.ts && bun src/compute-metrics.ts"
+    "backfill": "bun src/backfilling/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

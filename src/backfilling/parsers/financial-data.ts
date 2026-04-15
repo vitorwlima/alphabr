@@ -1,9 +1,6 @@
 import { parseCsv } from "./csv";
 
-const SCALE_FACTORS: Record<string, number> = {
-  MIL: 1000,
-  UNIDADE: 1,
-};
+const SCALE_FACTORS: Record<string, number> = { MIL: 1000, UNIDADE: 1 };
 
 const FINANCIAL_FILE_RE =
   /^(dfp|itr)_cia_aberta_([A-Z_]+)_(con|ind)_(\d{4})\.csv$/;
@@ -12,10 +9,10 @@ export function parseFinancialFilename(filename: string) {
   const match = filename.match(FINANCIAL_FILE_RE);
   if (!match) return null;
   return {
-    sourceType: match[1],
-    statement: match[2],
-    scope: match[3],
-    year: parseInt(match[4]),
+    sourceType: match[1]!,
+    statement: match[2]!,
+    scope: match[3]!,
+    year: parseInt(match[4]!),
   };
 }
 
@@ -34,10 +31,6 @@ export interface AccountEntry {
   vl_conta: number;
 }
 
-/**
- * Parse a financial CSV and return account entries,
- * already filtered (no PENÚLTIMO) and normalized (currency scaled).
- */
 export async function parseFinancialCsv(
   filePath: string,
   statement: string,
@@ -46,33 +39,32 @@ export async function parseFinancialCsv(
   const { headers, rows } = await parseCsv(filePath);
   if (rows.length === 0) return [];
 
-  const col = Object.fromEntries(headers.map((h, i) => [h, i]));
+  const col = Object.fromEntries(headers.map((h, i) => [h, i])) as Record<string, number>;
   const hasDtIni = "DT_INI_EXERC" in col;
-  const ordemIdx = col["ORDEM_EXERC"];
+  const ordemIdx = col["ORDEM_EXERC"]!;
 
   const result: AccountEntry[] = [];
 
   for (const row of rows) {
-    if (row[ordemIdx].startsWith("PEN")) continue;
+    if (row[ordemIdx]!.startsWith("PEN")) continue;
 
-    const cd_conta = row[col["CD_CONTA"]];
-    const scale = SCALE_FACTORS[row[col["ESCALA_MOEDA"]]] ?? 1;
-    // LPA (3.99.XX) is reported in R$/share — never scale it
+    const cd_conta = row[col["CD_CONTA"]!]!;
+    const scale = SCALE_FACTORS[row[col["ESCALA_MOEDA"]!]!] ?? 1;
     const effectiveScale = cd_conta.startsWith("3.99") ? 1 : scale;
 
     result.push({
-      cnpj: row[col["CNPJ_CIA"]],
-      cd_cvm: row[col["CD_CVM"]],
-      denom_cia: row[col["DENOM_CIA"]],
-      dt_refer: row[col["DT_REFER"]],
-      dt_fim_exerc: row[col["DT_FIM_EXERC"]],
-      dt_ini_exerc: hasDtIni ? row[col["DT_INI_EXERC"]] || null : null,
-      versao: parseInt(row[col["VERSAO"]]),
+      cnpj: row[col["CNPJ_CIA"]!]!,
+      cd_cvm: row[col["CD_CVM"]!]!,
+      denom_cia: row[col["DENOM_CIA"]!]!,
+      dt_refer: row[col["DT_REFER"]!]!,
+      dt_fim_exerc: row[col["DT_FIM_EXERC"]!]!,
+      dt_ini_exerc: hasDtIni ? row[col["DT_INI_EXERC"]!] || null : null,
+      versao: parseInt(row[col["VERSAO"]!]!),
       scope,
       statement,
       cd_conta,
-      ds_conta: row[col["DS_CONTA"]],
-      vl_conta: parseFloat(row[col["VL_CONTA"]]) * effectiveScale,
+      ds_conta: row[col["DS_CONTA"]!]!,
+      vl_conta: parseFloat(row[col["VL_CONTA"]!]!) * effectiveScale,
     });
   }
 

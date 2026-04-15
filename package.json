@@ -5,7 +5,10 @@
     "download": "bun src/download-cvm.ts",
     "extract": "bun src/extract-cvm.ts",
     "import": "bun src/import-cvm.ts",
-    "pipeline": "bun src/download-cvm.ts && bun src/extract-cvm.ts && bun src/import-cvm.ts"
+    "sync-tickers": "bun src/sync-tickers.ts",
+    "sync-prices": "bun src/sync-prices.ts",
+    "pipeline": "bun src/download-cvm.ts && bun src/extract-cvm.ts && bun src/import-cvm.ts",
+    "pipeline:prices": "bun src/sync-tickers.ts && bun src/sync-prices.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -14,6 +17,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "ky": "^2.0.0"
+    "ky": "^2.0.0",
+    "yahoo-finance2": "^3.14.0"
   }
 }

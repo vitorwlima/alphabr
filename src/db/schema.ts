@@ -51,5 +51,28 @@ export function createTables(db: Database): void {
     CREATE INDEX IF NOT EXISTS idx_cq_time
       ON company_quarters (dt_fim_exerc, scope);
 
+    CREATE TABLE IF NOT EXISTS tickers (
+      ticker        TEXT NOT NULL PRIMARY KEY,
+      cnpj          TEXT NOT NULL,
+      denom_cia     TEXT,
+      ticker_yahoo  TEXT NOT NULL,
+      updated_at    TEXT NOT NULL
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_tickers_cnpj ON tickers (cnpj);
+
+    CREATE TABLE IF NOT EXISTS daily_prices (
+      ticker_yahoo    TEXT NOT NULL,
+      date            TEXT NOT NULL,
+      open            REAL,
+      high            REAL,
+      low             REAL,
+      close           REAL,
+      adjusted_close  REAL,
+      volume          INTEGER,
+      PRIMARY KEY (ticker_yahoo, date)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_dp_date ON daily_prices (date);
   `);
 }

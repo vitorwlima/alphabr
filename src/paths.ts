@@ -4,3 +4,4 @@ const SRC_ROOT = path.resolve(import.meta.dir);
 
 export const CVM_RAW_DIR = path.join(SRC_ROOT, "data", "cvm-raw");
 export const CVM_EXTRACTED_DIR = path.join(SRC_ROOT, "data", "cvm-extracted");
+export const DB_PATH = path.join(SRC_ROOT, "data", "alphabr.db");

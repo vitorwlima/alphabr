@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "download": "bun src/download-cvm.ts",
-    "extract": "bun src/extract-cvm.ts"
+    "extract": "bun src/extract-cvm.ts",
+    "import": "bun src/import-cvm.ts",
+    "pipeline": "bun src/download-cvm.ts && bun src/extract-cvm.ts && bun src/import-cvm.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

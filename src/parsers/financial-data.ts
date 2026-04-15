@@ -55,7 +55,10 @@ export async function parseFinancialCsv(
   for (const row of rows) {
     if (row[ordemIdx].startsWith("PEN")) continue;
 
+    const cd_conta = row[col["CD_CONTA"]];
     const scale = SCALE_FACTORS[row[col["ESCALA_MOEDA"]]] ?? 1;
+    // LPA (3.99.XX) is reported in R$/share — never scale it
+    const effectiveScale = cd_conta.startsWith("3.99") ? 1 : scale;
 
     result.push({
       cnpj: row[col["CNPJ_CIA"]],
@@ -67,9 +70,9 @@ export async function parseFinancialCsv(
       versao: parseInt(row[col["VERSAO"]]),
       scope,
       statement,
-      cd_conta: row[col["CD_CONTA"]],
+      cd_conta,
       ds_conta: row[col["DS_CONTA"]],
-      vl_conta: parseFloat(row[col["VL_CONTA"]]) * scale,
+      vl_conta: parseFloat(row[col["VL_CONTA"]]) * effectiveScale,
     });
   }
 

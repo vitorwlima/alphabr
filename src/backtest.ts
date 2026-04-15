@@ -170,6 +170,15 @@ async function main() {
   let portfolioCumulative = 1.0;
   let benchmarkCumulative = 1.0;
 
+  // For buy-and-hold benchmark: track price continuously (no gaps)
+  const firstEntryDate = addDays(rebalDates[0].dt_fim_exerc, 5);
+  let benchStartPrice = (
+    priceAfter.get(config.benchmark, firstEntryDate) as {
+      date: string;
+      adjusted_close: number;
+    } | null
+  )?.adjusted_close ?? 0;
+
   for (let i = 0; i < rebalDates.length - 1; i++) {
     const quarterEnd = rebalDates[i].dt_fim_exerc;
     const nextQuarterEnd = rebalDates[i + 1].dt_fim_exerc;
@@ -239,23 +248,18 @@ async function main() {
     const avgReturn = totalReturn / validStocks;
     portfolioCumulative *= 1 + avgReturn;
 
-    // Benchmark return for the same period
-    const benchEntry = priceAfter.get(config.benchmark, entryDate) as {
-      date: string;
-      adjusted_close: number;
-    } | null;
+    // Benchmark: buy-and-hold (continuous, no gaps)
     const benchExit = priceBefore.get(config.benchmark, exitDate) as {
       date: string;
       adjusted_close: number;
     } | null;
 
     let benchReturn = 0;
-    if (benchEntry && benchExit && benchEntry.adjusted_close > 0) {
-      benchReturn =
-        (benchExit.adjusted_close - benchEntry.adjusted_close) /
-        benchEntry.adjusted_close;
+    if (benchExit && benchStartPrice > 0) {
+      const newCumulative = benchExit.adjusted_close / benchStartPrice;
+      benchReturn = newCumulative / benchmarkCumulative - 1;
+      benchmarkCumulative = newCumulative;
     }
-    benchmarkCumulative *= 1 + benchReturn;
 
     results.push({
       dt_fim_exerc: quarterEnd,

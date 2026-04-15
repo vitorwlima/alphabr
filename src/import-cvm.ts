@@ -101,6 +101,28 @@ function extractLucroLiquido(
 }
 
 /**
+ * Find LPA (earnings per share) for ON shares.
+ * The heading 3.99 is always 0. The actual value is in sub-accounts:
+ * - Most companies: 3.99.01.01 = "ON"
+ * - Some (e.g., VALE): 3.99.01.02 = "ON"
+ * We find the 3.99.01.XX entry where description is "ON".
+ */
+function extractLPA(
+  accounts: Map<string, { value: number; desc: string }>
+): number | null {
+  // Search all 3.99.01.XX entries for the one labeled "ON"
+  for (const [key, entry] of accounts) {
+    if (key.startsWith("DRE:3.99.01.") && entry.desc === "ON") {
+      return entry.value;
+    }
+  }
+  // Fallback: try 3.99.01.01 regardless of description
+  const fallback = accounts.get("DRE:3.99.01.01");
+  if (fallback && fallback.value !== 0) return fallback.value;
+  return null;
+}
+
+/**
  * Find EBIT — for regular companies it's 3.05 "Resultado Antes do Resultado Financeiro".
  * Banks don't have a traditional EBIT (their 3.05 means something else).
  */
@@ -280,7 +302,7 @@ async function main() {
           $resultado_financeiro: extract(a, "DRE:3.06"),
           $resultado_antes_tributos: extract(a, "DRE:3.07"),
           $lucro_liquido: extractLucroLiquido(a),
-          $lpa: extract(a, "DRE:3.99"),
+          $lpa: extractLPA(a),
 
           // DFC (try indirect method first, fall back to direct)
           $fluxo_caixa_operacional:
@@ -290,9 +312,19 @@ async function main() {
           $fluxo_caixa_financiamento:
             extract(a, "DFC_MI:6.03") ?? extract(a, "DFC_MD:6.03"),
 
-          // Shares outstanding from composicao de capital
-          $shares_outstanding:
-            sharesMap.get(`${q.cnpj}|${q.dt_refer}`)?.shares ?? null,
+          // Shares outstanding: prefer composicao de capital, fall back to deriving from LPA
+          $shares_outstanding: (() => {
+            const fromComposicao = sharesMap.get(`${q.cnpj}|${q.dt_refer}`)?.shares;
+            if (fromComposicao && fromComposicao > 0) return fromComposicao;
+
+            // Derive from lucro_liquido / LPA
+            const lpa = extractLPA(a);
+            const lucroLiquido = extractLucroLiquido(a);
+            if (lpa && lpa !== 0 && lucroLiquido && lucroLiquido !== 0) {
+              return Math.abs(lucroLiquido / lpa);
+            }
+            return null;
+          })(),
         });
       }
 

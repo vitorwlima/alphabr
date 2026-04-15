@@ -336,6 +336,9 @@ async function main() {
     `  Win Rate:       ${wins}/${results.length} quarters (${((wins / results.length) * 100).toFixed(0)}%)`
   );
   console.log(
+    `  R$100 became:   R$${(portfolioCumulative * 100).toFixed(2)} (benchmark: R$${(benchmarkCumulative * 100).toFixed(2)})`
+  );
+  console.log(
     `  Beat Benchmark: ${alpha}/${results.length} quarters (${((alpha / results.length) * 100).toFixed(0)}%)`
   );
   console.log(`  Quarters:       ${results.length}`);

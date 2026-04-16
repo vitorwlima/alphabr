@@ -115,6 +115,25 @@ function parseArgs() {
   return defaults;
 }
 
+/**
+ * Progressively widen numeric thresholds in a SQL-like filter string.
+ * Each `col > X` is loosened to `col > X - step*|X|` and each `col < X`
+ * to `col < X + step*|X|`. Near-zero bounds use a minimum delta so they
+ * still move. step = 0 returns the filter unchanged.
+ */
+function relaxFilter(filter: string, step: number): string {
+  if (step <= 0) return filter;
+  return filter.replace(
+    /(\w+)\s*(>=|<=|>|<)\s*(-?\d+(?:\.\d+)?(?:e[+-]?\d+)?)/gi,
+    (_m, col: string, op: string, valStr: string) => {
+      const val = parseFloat(valStr);
+      const delta = step * Math.max(Math.abs(val), 0.01);
+      const newVal = op.startsWith(">") ? val - delta : val + delta;
+      return `${col} ${op} ${newVal}`;
+    }
+  );
+}
+
 async function main() {
   const config = parseArgs();
   const db = openDatabase();
@@ -179,24 +198,38 @@ async function main() {
     const quarterEnd = rebalDates[i]!.dt_fim_exerc;
     const nextQuarterEnd = rebalDates[i + 1]!.dt_fim_exerc;
 
-    // Screen and rank stocks for this quarter
-    const sql = `
-      SELECT cnpj, ticker_yahoo, pl_ratio, pvp_ratio, ev_ebit, roe, roa,
+    // Screen and rank stocks for this quarter. If the strict filter yields
+    // fewer than --top stocks, progressively relax the numeric thresholds
+    // until we have enough. This keeps the spirit of the strategy while
+    // guaranteeing a full, diversified portfolio every period.
+    const cols = `cnpj, ticker_yahoo, pl_ratio, pvp_ratio, ev_ebit, roe, roa,
              margem_liquida, margem_bruta, margem_ebit, market_cap,
-             liquidez_corrente, divida_liquida_ebit, price_to_sales
-      FROM company_metrics
-      WHERE dt_fim_exerc = ?
-        AND ${config.filter}
-      ORDER BY ${config.rank}
-      LIMIT ?
-    `;
+             liquidez_corrente, divida_liquida_ebit, price_to_sales`;
 
-    let selected: { cnpj: string; ticker_yahoo: string }[];
-    try {
-      selected = db.query(sql).all(quarterEnd, config.top) as any[];
-    } catch (err: any) {
-      console.error(`SQL error at ${quarterEnd}: ${err.message}`);
-      continue;
+    let selected: { cnpj: string; ticker_yahoo: string }[] = [];
+    let usedStep = 0;
+    const STEP_INCREMENT = 0.1;
+    const MAX_STEP = 3.0; // up to 300% widening; beyond this the universe is just tiny
+
+    for (let s = 0; s <= MAX_STEP + 1e-9; s += STEP_INCREMENT) {
+      const currentFilter = relaxFilter(config.filter, s);
+      const sql = `
+        SELECT ${cols}
+        FROM company_metrics
+        WHERE dt_fim_exerc = ?
+          AND ${currentFilter}
+        ORDER BY ${config.rank}
+        LIMIT ?
+      `;
+      try {
+        selected = db.query(sql).all(quarterEnd, config.top) as any[];
+      } catch (err: any) {
+        console.error(`SQL error at ${quarterEnd} (step=${s.toFixed(1)}): ${err.message}`);
+        selected = [];
+        break;
+      }
+      usedStep = s;
+      if (selected.length >= config.top) break;
     }
 
     if (selected.length === 0) continue;
@@ -267,12 +300,16 @@ async function main() {
     });
 
     const tickers = portfolio.map((p) => p.ticker_yahoo.replace(".SA", "")).join(", ");
+    const stockSummary =
+      usedStep > 0
+        ? `${validStocks} stocks (relax ${usedStep.toFixed(1)})`
+        : `${validStocks} stocks`;
     console.log(
       `${quarterEnd}: ${(avgReturn * 100).toFixed(1).padStart(6)}% ` +
         `(cum ${((portfolioCumulative - 1) * 100).toFixed(1)}%) | ` +
         `Bench ${(benchReturn * 100).toFixed(1)}% ` +
         `(cum ${((benchmarkCumulative - 1) * 100).toFixed(1)}%) | ` +
-        `${validStocks} stocks: ${tickers}`
+        `${stockSummary}: ${tickers}`
     );
   }
 

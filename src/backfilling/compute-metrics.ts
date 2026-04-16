@@ -120,6 +120,7 @@ interface MetricInput {
   sharesOutstanding: number;
   price: number;
   priceDate: string;
+  avgDailyLiquidity?: number | null;
   return1q?: number | null;
   returnStart?: string | null;
   returnEnd?: string | null;
@@ -159,6 +160,7 @@ function buildMetricRow(m: MetricInput) {
     $margem_ebit: safeDiv(m.ttm.ebit, m.ttm.receita_liquida),
     $liquidez_corrente: safeDiv(m.cur.ativo_circulante, m.cur.passivo_circulante),
     $divida_liquida_ebit: m.ttm.ebit && m.ttm.ebit > 0 ? netDebt / m.ttm.ebit : null,
+    $avg_daily_liquidity: m.avgDailyLiquidity ?? null,
     $return_1q: m.return1q ?? null,
     $return_date_start: m.returnStart ?? null,
     $return_date_end: m.returnEnd ?? null,
@@ -223,6 +225,14 @@ export async function computeMetrics(db: Database) {
      ORDER BY date DESC LIMIT 1`
   );
 
+  // Avg daily liquidity (volume * close) over the 3 months before a date
+  const avgLiquidityStmt = db.prepare(
+    `SELECT AVG(volume * close) as avg_liq
+     FROM daily_prices
+     WHERE ticker_yahoo = ? AND date > ? AND date <= ?
+       AND volume IS NOT NULL AND close IS NOT NULL AND volume > 0`
+  );
+
   const insertMetric = db.prepare(`
     INSERT OR REPLACE INTO company_metrics (
       cnpj, dt_fim_exerc, scope, ticker_yahoo,
@@ -232,6 +242,7 @@ export async function computeMetrics(db: Database) {
       pl_ratio, pvp_ratio, ev_ebit, price_to_sales,
       roe, roa, margem_liquida, margem_bruta, margem_ebit,
       liquidez_corrente, divida_liquida_ebit,
+      avg_daily_liquidity,
       return_1q, return_date_start, return_date_end
     ) VALUES (
       $cnpj, $dt_fim_exerc, $scope, $ticker_yahoo,
@@ -241,6 +252,7 @@ export async function computeMetrics(db: Database) {
       $pl_ratio, $pvp_ratio, $ev_ebit, $price_to_sales,
       $roe, $roa, $margem_liquida, $margem_bruta, $margem_ebit,
       $liquidez_corrente, $divida_liquida_ebit,
+      $avg_daily_liquidity,
       $return_1q, $return_date_start, $return_date_end
     )
   `);
@@ -295,10 +307,15 @@ export async function computeMetrics(db: Database) {
           returnEnd = endPrice.date;
         }
 
+        // Avg daily liquidity: 3 months before quarter-end
+        const liqFrom = addMonths(dt_fim_exerc, -3);
+        const liqRow = avgLiquidityStmt.get(tickerYahoo, liqFrom, dt_fim_exerc) as { avg_liq: number | null } | null;
+        const avgDailyLiquidity = liqRow?.avg_liq ?? null;
+
         insertMetric.run(buildMetricRow({
           cnpj, dt_fim_exerc, tickerYahoo, cur, ttm, sharesOutstanding,
           price: priceRow.adjusted_close, priceDate: priceRow.date,
-          return1q, returnStart, returnEnd,
+          avgDailyLiquidity, return1q, returnStart, returnEnd,
         }));
         count++;
 
@@ -309,9 +326,14 @@ export async function computeMetrics(db: Database) {
             adjusted_close: number;
           } | null;
           if (latestPrice && latestPrice.date > priceRow.date) {
+            // Current snapshot: use latest 3 months of liquidity
+            const curLiqFrom = addMonths(latestPrice.date, -3);
+            const curLiqRow = avgLiquidityStmt.get(tickerYahoo, curLiqFrom, latestPrice.date) as { avg_liq: number | null } | null;
+
             insertMetric.run(buildMetricRow({
               cnpj, dt_fim_exerc: "current", tickerYahoo, cur, ttm, sharesOutstanding,
               price: latestPrice.adjusted_close, priceDate: latestPrice.date,
+              avgDailyLiquidity: curLiqRow?.avg_liq ?? null,
             }));
             currentCount++;
           }

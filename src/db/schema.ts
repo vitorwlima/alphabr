@@ -119,6 +119,9 @@ export function createTables(db: Database): void {
       liquidez_corrente REAL,  -- Current ratio
       divida_liquida_ebit REAL, -- Net debt / EBIT
 
+      -- Trading liquidity
+      avg_daily_liquidity REAL, -- Avg daily volume * price (R$/day) over prior 3 months
+
       -- Return (next quarter forward return for backtesting)
       return_1q         REAL,
       return_date_start TEXT,

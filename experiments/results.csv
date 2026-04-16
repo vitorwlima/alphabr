@@ -1,26 +1,26 @@
 strategy_id,total_return,cagr,max_drawdown,sharpe,win_rate,quarters,filter,rank,top
-"pl_3",1224.6,21.1,39.4,0.91,64,55,"pl_ratio > 0 AND pl_ratio < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl_3_t20",2457.7,27.1,39.4,1.09,65,55,"pl_ratio > 0 AND pl_ratio < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl_5",962.4,19.1,37.6,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl_5_t20",2149.3,25.9,39.9,1.07,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl_3",1079.8,20.1,34.9,0.89,64,55,"pl_ratio > 0 AND pl_ratio < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl_3_t20",2347.0,26.7,27.8,1.14,71,55,"pl_ratio > 0 AND pl_ratio < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl_5",975.1,19.2,37.6,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl_5_t20",1598.4,23.3,37.9,0.97,69,55,"pl_ratio > 0 AND pl_ratio < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "pl_8",975.1,19.2,37.6,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 8 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl_8_t20",1672.6,23.7,40.8,0.97,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl_8_t20",1520.2,22.9,40.8,0.95,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "pl_10",975.1,19.2,37.6,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl_10_t20",1662.0,23.7,40.8,0.97,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl_10_t20",1615.7,23.4,40.8,0.96,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "pl_15",975.1,19.2,37.6,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
 "pl_15_t20",1621.0,23.5,40.8,0.96,69,55,"pl_ratio > 0 AND pl_ratio < 15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev_3",181.3,8.0,40.6,0.54,54,35,"ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev_3_t20",176.1,7.8,40.6,0.53,54,35,"ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev_5",859.5,18.2,56.7,0.81,73,55,"ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev_5_t20",994.1,19.4,56.7,0.84,75,55,"ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev_8",1766.9,24.2,34.6,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev_8_t20",1869.0,24.7,34.6,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev_3",3387.0,30.1,25.6,1.38,75,55,"ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev_3_t20",3206.0,29.6,27.0,1.43,78,55,"ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev_5",1775.1,24.2,29.5,1.19,76,55,"ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev_5_t20",2423.1,27.0,27.0,1.28,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev_8",1671.3,23.7,35.9,1.12,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev_8_t20",1568.2,23.2,34.9,1.06,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "ev_10",1671.3,23.7,35.9,1.12,75,55,"ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev_10_t20",1489.5,22.7,38.0,1.04,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev_10_t20",1536.8,23.0,36.9,1.05,75,55,"ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "ev_15",1671.3,23.7,35.9,1.12,75,55,"ev_ebit > 0 AND ev_ebit < 15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev_15_t20",1450.6,22.5,36.9,1.02,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev_15_t20",1445.6,22.5,36.9,1.02,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "pvp_05",1977.5,25.2,40.9,0.87,62,55,"pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pvp_05_t20",1488.6,22.7,41.5,0.85,62,55,"pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"pvp_05_t20",1256.9,21.3,37.3,0.81,62,55,"pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
 "pvp_1",1977.5,25.2,40.9,0.87,62,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
 "pvp_1_t20",1319.0,21.7,40.3,0.81,60,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
 "pvp_15",1977.5,25.2,40.9,0.87,62,55,"pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
@@ -28,253 +28,253 @@ strategy_id,total_return,cagr,max_drawdown,sharpe,win_rate,quarters,filter,rank,
 "pvp_2",1977.5,25.2,40.9,0.87,62,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
 "pvp_2_t20",1319.0,21.7,40.3,0.81,60,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
 "ps_05",977.9,19.3,43.0,0.71,56,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps_05_t20",1118.7,20.3,42.7,0.76,56,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps_05_t20",1086.1,20.1,44.2,0.75,58,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
 "ps_1",977.9,19.3,43.0,0.71,56,55,"price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
 "ps_1_t20",1065.7,20.0,44.2,0.74,58,55,"price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
 "ps_2",977.9,19.3,43.0,0.71,56,55,"price_to_sales > 0 AND price_to_sales < 2 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
 "ps_2_t20",1065.7,20.0,44.2,0.74,58,55,"price_to_sales > 0 AND price_to_sales < 2 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"pl5_ev5",1099.5,20.2,56.7,0.86,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_ev5_t20",976.7,19.2,56.7,0.83,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev5_rankpl",976.5,19.2,56.7,0.84,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_ev5_rankpl_t20",985.7,19.3,56.7,0.84,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl8_ev8",2304.8,26.6,34.6,1.24,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_t20",2065.4,25.6,34.6,1.18,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5",2724.8,28.1,29.5,1.29,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_ev5_t20",2563.3,27.5,27.0,1.29,78,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5_rankpl",2271.5,26.4,29.5,1.23,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_ev5_rankpl_t20",2453.2,27.1,24.6,1.32,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl8_ev8",2131.8,25.9,35.9,1.21,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_t20",1496.1,22.8,33.8,1.06,73,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "pl10_ev10",2009.2,25.3,35.9,1.19,75,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl10_ev10_t20",1596.4,23.3,38.5,1.06,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl3_ev3",129.2,6.3,40.6,0.46,54,35,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl3_ev3_t20",129.2,6.3,40.6,0.46,54,35,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_pvp1",1453.4,22.5,37.6,0.98,64,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_pvp1_t20",2586.6,27.6,38.1,1.13,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl10_ev10_t20",1387.9,22.1,36.0,1.01,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl3_ev3",2995.9,29.0,25.6,1.33,73,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl3_ev3_t20",2978.0,28.9,27.0,1.38,78,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_pvp1",1398.4,22.2,37.6,0.96,62,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_pvp1_t20",1657.5,23.7,38.6,0.98,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "pl8_pvp15",1279.0,21.5,37.6,0.95,64,55,"pl_ratio > 0 AND pl_ratio < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl8_pvp15_t20",1853.4,24.6,41.2,1.01,65,55,"pl_ratio > 0 AND pl_ratio < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev5_pvp1",1016.1,19.6,56.7,0.86,73,55,"ev_ebit > 0 AND ev_ebit < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev5_pvp1_t20",1026.7,19.6,56.7,0.86,73,55,"ev_ebit > 0 AND ev_ebit < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_pvp15",2486.9,27.2,31.1,1.24,78,55,"ev_ebit > 0 AND ev_ebit < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_pvp15_t20",2259.5,26.4,31.1,1.23,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ps1",1397.6,22.2,37.6,0.96,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_ps1_t20",2385.7,26.9,41.8,1.09,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev5_ps1",1438.5,22.4,60.2,0.88,76,54,"ev_ebit > 0 AND ev_ebit < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev5_ps1_t20",1339.4,21.8,60.2,0.86,76,54,"ev_ebit > 0 AND ev_ebit < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev5_ml5",1182.3,20.8,56.7,0.87,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_ev5_ml5_t20",1061.8,19.9,56.7,0.84,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev5_ml10",1020.0,19.6,56.7,0.83,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_ev5_ml10_t20",975.8,19.2,56.7,0.82,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev5_ml10_rankpl",1002.7,19.5,56.7,0.82,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_ev5_ml10_rankpl_t20",975.8,19.2,56.7,0.82,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl5_ev5_ml15",503.8,14.2,60.7,0.62,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_ev5_ml15_t20",511.1,14.3,60.7,0.63,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev5_ml20",732.3,17.0,56.7,0.72,68,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_ev5_ml20_t20",753.4,17.2,56.7,0.73,68,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl5_ev8_ml10_rankpl",1788.0,24.3,33.8,1.14,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_ev8_ml10_rankpl_t20",2418.0,27.0,33.8,1.21,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl8_ev8_ml10",2486.9,27.2,34.6,1.20,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_ml10_t20",1809.6,24.4,34.6,1.11,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl10_ev10_ml10",2265.1,26.4,35.9,1.18,78,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl10_ev10_ml10_t20",1615.2,23.4,38.9,1.06,75,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl8_ev8_mb30",2069.1,25.6,45.2,1.10,73,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_mb30_t20",1644.1,23.6,45.2,1.02,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl8_ev8_mb40",1679.5,23.8,45.2,0.99,67,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.4 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_mb40_t20",1743.8,24.1,45.2,1.01,67,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.4 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_mb30",2043.1,25.5,45.2,1.08,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_mb30_t20",1588.9,23.3,45.2,1.00,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl8_ev8_me15",2771.6,28.2,33.8,1.24,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_me15_t20",2094.9,25.7,33.8,1.18,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl10_ev10_me20",1658.0,23.7,40.2,1.05,76,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl10_ev10_me20_t20",1156.9,20.6,40.2,0.94,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev5_me15",810.3,17.8,56.7,0.76,71,55,"ev_ebit > 0 AND ev_ebit < 5 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev5_me15_t20",718.8,16.9,56.7,0.73,69,55,"ev_ebit > 0 AND ev_ebit < 5 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_me20",1900.1,24.8,36.2,1.09,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_me20_t20",1549.7,23.1,36.2,1.03,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ps1_ml10",2424.8,27.0,40.0,1.08,69,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps1_ml10_t20",2683.1,27.9,40.6,1.16,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ps1_ml15",2585.1,27.6,46.0,1.08,75,53,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps1_ml15_t20",2541.2,27.4,46.0,1.09,75,53,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ps05_ml10",2113.9,25.8,31.8,1.01,64,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps05_ml10_t20",2454.5,27.1,31.8,1.08,67,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ps2_ml10",1951.8,25.1,40.0,1.02,69,55,"price_to_sales > 0 AND price_to_sales < 2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps2_ml10_t20",2055.0,25.5,40.8,1.09,73,55,"price_to_sales > 0 AND price_to_sales < 2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ps1_mb30",1028.7,19.7,52.4,0.72,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps1_mb30_t20",1414.4,22.3,52.4,0.82,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ps1_me15",2714.8,28.0,37.1,1.02,69,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"ps1_me15_t20",3029.4,29.1,37.1,1.16,69,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"ev10_roe10",2307.7,26.6,36.9,1.15,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev10_roe10_t20",1542.0,23.0,37.9,1.04,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_pvp15_t20",1847.1,24.6,42.2,1.00,65,55,"pl_ratio > 0 AND pl_ratio < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev5_pvp1",2028.6,25.4,29.5,1.22,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev5_pvp1_t20",2610.3,27.7,24.7,1.32,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_pvp15",2153.9,26.0,36.8,1.17,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_pvp15_t20",1653.3,23.6,33.2,1.09,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND pvp_ratio > 0 AND pvp_ratio < 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ps1",1353.1,21.9,37.6,0.95,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_ps1_t20",1537.4,23.0,39.6,0.96,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev5_ps1",2679.6,27.9,32.8,1.22,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev5_ps1_t20",2302.7,26.6,27.5,1.26,76,55,"ev_ebit > 0 AND ev_ebit < 5 AND price_to_sales > 0 AND price_to_sales < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5_ml5",2349.0,26.7,29.5,1.22,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_ev5_ml5_t20",2475.1,27.2,27.0,1.26,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5_ml10",1836.6,24.5,35.9,1.12,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_ev5_ml10_t20",2477.1,27.2,27.0,1.29,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5_ml10_rankpl",1415.9,22.3,36.8,1.05,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_ev5_ml10_rankpl_t20",2792.8,28.3,24.6,1.33,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl5_ev5_ml15",1971.0,25.2,35.9,1.15,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_ev5_ml15_t20",2258.3,26.4,27.0,1.28,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev5_ml20",2087.2,25.7,35.9,1.08,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_ev5_ml20_t20",2195.1,26.1,27.0,1.24,78,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl5_ev8_ml10_rankpl",1923.5,25.0,37.5,1.16,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_ev8_ml10_rankpl_t20",2076.8,25.6,25.6,1.21,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl8_ev8_ml10",2355.9,26.8,35.9,1.20,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_ml10_t20",1064.6,19.9,36.0,0.94,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl10_ev10_ml10",2152.5,25.9,35.9,1.16,76,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl10_ev10_ml10_t20",1046.8,19.8,36.5,0.94,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_ev8_mb30",2177.3,26.1,38.4,1.21,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_mb30_t20",1169.9,20.7,32.7,0.98,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_ev8_mb40",2028.9,25.4,31.9,1.14,73,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.4 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_mb40_t20",1204.1,21.0,32.7,0.99,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.4 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_mb30",2016.3,25.4,38.4,1.18,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_mb30_t20",1406.2,22.2,33.5,1.02,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_ev8_me15",2690.8,28.0,35.9,1.24,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_me15_t20",1336.4,21.8,36.0,1.00,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl10_ev10_me20",1659.4,23.7,39.6,1.05,75,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl10_ev10_me20_t20",896.8,18.6,36.0,0.89,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev5_me15",2320.6,26.6,35.9,1.17,75,55,"ev_ebit > 0 AND ev_ebit < 5 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev5_me15_t20",2435.9,27.1,27.0,1.24,76,55,"ev_ebit > 0 AND ev_ebit < 5 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_me20",1454.2,22.5,39.6,1.02,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_me20_t20",998.7,19.4,36.9,0.92,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ps1_ml10",1713.3,23.9,40.0,0.97,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps1_ml10_t20",1374.7,22.1,40.3,0.95,64,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps1_ml15",1807.0,24.4,43.0,1.02,71,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps1_ml15_t20",1349.0,21.9,40.3,0.97,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps05_ml10",1983.7,25.2,38.5,1.02,65,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps05_ml10_t20",1056.2,19.9,40.9,0.84,67,55,"price_to_sales > 0 AND price_to_sales < 0.5 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps2_ml10",1897.4,24.8,40.0,1.01,69,55,"price_to_sales > 0 AND price_to_sales < 2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps2_ml10_t20",1580.8,23.2,40.5,1.00,69,55,"price_to_sales > 0 AND price_to_sales < 2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps1_mb30",893.1,18.5,52.4,0.69,64,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps1_mb30_t20",885.2,18.5,47.9,0.72,62,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_bruta > 0.3 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ps1_me15",2034.5,25.4,37.1,0.93,69,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"ps1_me15_t20",1563.0,23.2,41.3,0.93,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_ebit > 0.15 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"ev10_roe10",2357.8,26.8,36.9,1.16,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev10_roe10_t20",1538.0,23.0,35.1,1.04,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "ev15_roe10",2259.9,26.4,36.9,1.15,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev15_roe10_t20",1229.6,21.1,34.8,0.98,71,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_roe15",2015.4,25.4,46.4,1.12,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_roe15_t20",1741.5,24.1,46.4,1.08,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev5_roe20",322.7,11.3,56.7,0.59,70,43,"ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev5_roe20_t20",264.2,10.0,56.7,0.54,70,43,"ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev10_roe15_rankroe",1758.2,24.2,42.5,1.05,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","roe DESC",10
-"ev10_roe15_rankroe_t20",1552.0,23.1,42.5,1.02,69,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","roe DESC",20
+"ev15_roe10_t20",1288.4,21.5,34.8,1.00,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_roe15",2051.5,25.5,41.9,1.13,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_roe15_t20",1347.1,21.9,32.8,1.01,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev5_roe20",2846.4,28.5,29.5,1.32,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev5_roe20_t20",2620.2,27.7,27.0,1.30,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev10_roe15_rankroe",1336.1,21.8,41.9,0.97,75,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","roe DESC",10
+"ev10_roe15_rankroe_t20",1227.8,21.1,33.5,1.01,69,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","roe DESC",20
 "pl10_roe10",1800.5,24.4,38.9,0.99,62,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_roe10_t20",1645.6,23.6,38.7,1.01,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl10_roe15",1911.9,24.9,45.4,1.05,78,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_roe15_t20",1596.4,23.3,42.0,1.05,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl5_roe15",1817.3,24.5,47.6,1.05,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl5_roe15_t20",1573.4,23.2,47.6,1.04,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl15_roe20",1051.6,19.8,41.3,0.91,73,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl15_roe20_t20",773.8,17.4,41.3,0.83,73,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl15_roe25",499.1,14.2,44.1,0.69,64,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl15_roe25_t20",352.1,11.8,44.1,0.60,65,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev10_roa10",921.3,18.8,51.8,0.84,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev10_roa10_t20",767.5,17.4,51.8,0.79,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl10_roa10",661.8,16.2,47.3,0.76,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_roa10_t20",690.1,16.5,47.3,0.77,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev8_roa15",235.4,9.4,59.6,0.58,60,42,"ev_ebit > 0 AND ev_ebit < 8 AND roa > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_roa15_t20",227.2,9.2,59.6,0.57,60,42,"ev_ebit > 0 AND ev_ebit < 8 AND roa > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pvp15_roe10",1918.9,24.9,34.4,1.03,71,55,"pvp_ratio > 0 AND pvp_ratio < 1.5 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pvp15_roe10_t20",1611.0,23.4,36.8,0.98,65,55,"pvp_ratio > 0 AND pvp_ratio < 1.5 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
-"pvp1_roe15",1867.8,24.7,45.1,1.03,80,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pvp1_roe15_t20",2014.8,25.4,45.1,1.08,78,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
-"pvp2_roe20",842.6,18.1,51.1,0.80,64,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pvp2_roe20_t20",801.2,17.7,51.1,0.80,64,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
-"pl10_lowdebt2",803.1,17.7,47.5,0.77,69,54,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_lowdebt2_t20",719.6,16.9,47.5,0.74,67,54,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev8_lowdebt2",1702.5,23.9,32.3,1.08,63,52,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_lowdebt2_t20",1996.4,25.3,32.3,1.13,62,52,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_lowdebt1",78.1,4.4,45.1,0.38,61,41,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_lowdebt1_t20",78.1,4.4,45.1,0.38,61,41,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl10_nodebt",98.2,10.7,34.0,0.65,53,17,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_nodebt_t20",98.2,10.7,34.0,0.65,53,17,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev10_nodebt",184.4,16.7,37.5,0.78,55,20,"ev_ebit > 0 AND ev_ebit < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev10_nodebt_t20",184.4,16.7,37.5,0.78,55,20,"ev_ebit > 0 AND ev_ebit < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl8_nodebt_roe10",64.6,8.0,24.1,0.60,57,14,"pl_ratio > 0 AND pl_ratio < 8 AND divida_liquida_ebit < 0 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl8_nodebt_roe10_t20",64.6,8.0,24.1,0.60,57,14,"pl_ratio > 0 AND pl_ratio < 8 AND divida_liquida_ebit < 0 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl10_roe10_t20",1625.7,23.5,38.7,1.03,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl10_roe15",1811.5,24.4,45.4,1.03,78,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl10_roe15_t20",1361.1,22.0,38.7,1.02,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl5_roe15",1634.4,23.5,43.7,1.03,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl5_roe15_t20",1720.9,24.0,37.1,1.04,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl15_roe20",1482.0,22.7,43.3,1.00,75,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl15_roe20_t20",969.5,19.2,38.3,0.93,71,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl15_roe25",1307.6,21.6,43.3,1.00,73,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl15_roe25_t20",1007.6,19.5,37.0,0.93,73,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev10_roa10",1737.0,24.1,38.0,1.12,78,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev10_roa10_t20",980.2,19.3,32.8,0.94,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl10_roa10",997.8,19.4,38.6,0.92,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl10_roa10_t20",769.6,17.4,36.8,0.87,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND roa > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev8_roa15",1433.9,22.4,38.9,1.03,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND roa > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_roa15_t20",1469.8,22.6,32.8,1.07,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND roa > 0.15 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pvp15_roe10",1880.5,24.8,34.4,1.02,71,55,"pvp_ratio > 0 AND pvp_ratio < 1.5 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
+"pvp15_roe10_t20",1464.9,22.6,39.2,0.94,69,55,"pvp_ratio > 0 AND pvp_ratio < 1.5 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"pvp1_roe15",1167.4,20.7,41.0,0.91,73,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
+"pvp1_roe15_t20",1615.1,23.4,35.9,1.00,67,55,"pvp_ratio > 0 AND pvp_ratio < 1 AND roe > 0.15 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"pvp2_roe20",1323.6,21.7,45.2,0.95,75,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
+"pvp2_roe20_t20",1233.4,21.2,34.2,1.00,69,55,"pvp_ratio > 0 AND pvp_ratio < 2 AND roe > 0.2 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"pl10_lowdebt2",1441.9,22.5,27.7,1.04,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl10_lowdebt2_t20",1285.5,21.5,25.7,1.06,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev8_lowdebt2",923.8,18.8,30.6,0.94,67,55,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_lowdebt2_t20",1183.6,20.8,27.2,1.02,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_lowdebt1",909.6,18.7,37.2,0.93,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_lowdebt1_t20",1165.7,20.7,30.0,1.03,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl10_nodebt",1645.6,23.6,31.3,0.88,66,47,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl10_nodebt_t20",1645.6,23.6,31.3,0.88,66,47,"pl_ratio > 0 AND pl_ratio < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev10_nodebt",524.4,14.5,52.1,0.72,70,43,"ev_ebit > 0 AND ev_ebit < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev10_nodebt_t20",524.4,14.5,52.1,0.72,70,43,"ev_ebit > 0 AND ev_ebit < 10 AND divida_liquida_ebit < 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_nodebt_roe10",1243.1,21.2,31.3,0.83,64,47,"pl_ratio > 0 AND pl_ratio < 8 AND divida_liquida_ebit < 0 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl8_nodebt_roe10_t20",1243.1,21.2,31.3,0.83,64,47,"pl_ratio > 0 AND pl_ratio < 8 AND divida_liquida_ebit < 0 AND roe > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "pl10_liq15",1391.4,22.2,36.9,0.95,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_liq15_t20",1200.6,20.9,40.6,0.88,62,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl10_liq2",1087.4,20.1,41.4,0.83,60,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"pl10_liq2_t20",1124.7,20.4,41.4,0.84,64,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"ev8_liq15",1485.6,22.7,33.8,1.03,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_liq15_t20",1349.6,21.9,33.8,1.02,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev8_liq2",2147.0,25.9,31.9,1.10,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev8_liq2_t20",1877.6,24.7,31.9,1.07,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"pl8_ev8_cf",2329.2,26.7,34.6,1.25,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl8_ev8_cf_t20",2142.7,25.9,34.6,1.21,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl10_liq15_t20",1303.1,21.6,38.7,0.92,64,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl10_liq2",1151.4,20.6,38.0,0.86,60,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"pl10_liq2_t20",1104.6,20.2,35.8,0.86,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"ev8_liq15",1203.7,20.9,35.9,0.97,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_liq15_t20",1277.4,21.4,34.9,1.01,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev8_liq2",1390.7,22.2,41.1,0.99,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"ev8_liq2_t20",1090.5,20.1,34.9,0.96,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND liquidez_corrente > 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"pl8_ev8_cf",2235.5,26.3,35.9,1.23,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl8_ev8_cf_t20",1242.5,21.2,33.8,1.01,67,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "ev10_cf",2029.1,25.4,35.9,1.20,75,55,"ev_ebit > 0 AND ev_ebit < 10 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"ev10_cf_t20",1479.8,22.7,38.0,1.06,69,55,"ev_ebit > 0 AND ev_ebit < 10 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_qual1",2318.0,26.6,46.4,1.13,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_val_qual1_t20",1655.2,23.6,46.4,1.03,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_qual2",1993.9,25.3,36.9,1.13,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_val_qual2_t20",1454.9,22.5,37.9,1.03,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_qual_liq",2549.3,27.5,24.6,1.15,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_val_qual_liq_t20",2389.2,26.9,24.6,1.13,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_qual_liq_pl",2619.8,27.7,24.6,1.16,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"mf_val_qual_liq_pl_t20",2389.2,26.9,24.6,1.13,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"mf_kitchen_sink",1941.1,25.0,51.5,1.05,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.1 AND margem_liquida > 0.05 AND liquidez_corrente > 1 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_kitchen_sink_t20",1638.5,23.6,51.5,1.01,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.1 AND margem_liquida > 0.05 AND liquidez_corrente > 1 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_qual_pvp",1024.6,19.6,56.7,0.81,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"mf_val_qual_pvp_t20",932.5,18.9,56.7,0.78,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"mf_mb_ml_roe",1334.0,21.8,45.1,0.96,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_bruta > 0.3 AND margem_liquida > 0.1 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_mb_ml_roe_t20",1101.8,20.2,45.1,0.91,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_bruta > 0.3 AND margem_liquida > 0.1 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_roe_debt",272.5,10.2,64.1,0.54,72,47,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.2 AND margem_liquida > 0.15 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"mf_val_roe_debt_t20",245.1,9.6,64.1,0.52,70,47,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.2 AND margem_liquida > 0.15 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"mf_ev_roe_mb_liq",762.1,17.3,62.4,0.77,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_bruta > 0.3 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_ev_roe_mb_liq_t20",678.4,16.4,62.4,0.75,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_bruta > 0.3 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mf_val_roe20_ml10",377.5,12.3,56.7,0.63,67,42,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mf_val_roe20_ml10_t20",346.4,11.7,56.7,0.61,67,42,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev10_cf_t20",1340.6,21.8,36.9,1.03,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_qual1",1984.5,25.2,41.9,1.12,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_val_qual1_t20",1134.3,20.5,33.8,0.97,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_qual2",1985.2,25.2,36.9,1.12,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_val_qual2_t20",1359.0,22.0,32.7,1.03,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_qual_liq",2228.5,26.3,35.9,1.19,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_val_qual_liq_t20",2359.8,26.8,27.0,1.29,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_qual_liq_pl",1611.6,23.4,36.8,1.09,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"mf_val_qual_liq_pl_t20",2623.2,27.7,25.7,1.33,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"mf_kitchen_sink",1551.1,23.1,39.6,1.06,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.1 AND margem_liquida > 0.05 AND liquidez_corrente > 1 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_kitchen_sink_t20",1507.0,22.8,27.6,1.16,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.1 AND margem_liquida > 0.05 AND liquidez_corrente > 1 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_qual_pvp",1603.0,23.4,36.8,1.08,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"mf_val_qual_pvp_t20",2569.3,27.5,25.7,1.31,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND pvp_ratio > 0 AND pvp_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"mf_mb_ml_roe",1565.9,23.2,41.1,1.03,75,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_bruta > 0.3 AND margem_liquida > 0.1 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_mb_ml_roe_t20",977.3,19.3,36.5,0.91,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_bruta > 0.3 AND margem_liquida > 0.1 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_roe_debt",1344.0,21.9,39.6,0.99,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.2 AND margem_liquida > 0.15 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"mf_val_roe_debt_t20",1317.2,21.7,27.1,1.10,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.2 AND margem_liquida > 0.15 AND divida_liquida_ebit < 3 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"mf_ev_roe_mb_liq",1560.8,23.1,38.4,1.04,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_bruta > 0.3 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_ev_roe_mb_liq_t20",1140.8,20.5,32.8,0.94,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND roe > 0.15 AND margem_bruta > 0.3 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mf_val_roe20_ml10",2044.8,25.5,35.9,1.18,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mf_val_roe20_ml10_t20",2487.8,27.3,27.0,1.27,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
 "pl10_ev10_rank_roe",1719.9,24.0,41.0,1.05,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",10
-"pl10_ev10_rank_roe_t20",1566.7,23.2,38.5,1.04,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",20
+"pl10_ev10_rank_roe_t20",1193.0,20.9,36.0,0.97,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",20
 "pl10_ev10_rank_ml",749.4,17.2,42.0,0.79,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",10
-"pl10_ev10_rank_ml_t20",1079.8,20.1,38.5,0.93,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",20
+"pl10_ev10_rank_ml_t20",842.1,18.1,36.0,0.87,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND ev_ebit > 0 AND ev_ebit < 10 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",20
 "pl10_ev10_rank_pvp",986.4,19.3,40.9,0.80,60,55,"pl_ratio > 0 AND pl_ratio < 10 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pl10_ev10_rank_pvp_t20",1595.9,23.3,39.4,0.94,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"pl10_ev10_rank_pvp_t20",1528.5,23.0,39.4,0.92,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
 "pl10_ev10_rank_ps",763.3,17.3,40.9,0.75,64,55,"pl_ratio > 0 AND pl_ratio < 10 AND price_to_sales > 0 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"pl10_ev10_rank_ps_t20",1059.0,19.9,42.1,0.83,65,55,"pl_ratio > 0 AND pl_ratio < 10 AND price_to_sales > 0 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"pl10_ev10_rank_ps_t20",997.2,19.4,42.1,0.81,65,55,"pl_ratio > 0 AND pl_ratio < 10 AND price_to_sales > 0 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
 "pl10_ev10_rank_roa",1275.6,21.4,38.9,0.99,78,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0 AND avg_daily_liquidity > 1e6","roa DESC",10
-"pl10_ev10_rank_roa_t20",1458.5,22.6,38.0,1.03,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0 AND avg_daily_liquidity > 1e6","roa DESC",20
-"ev8_me_rank_me",1356.1,21.9,34.6,1.00,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.1 AND avg_daily_liquidity > 1e6","margem_ebit DESC",10
-"ev8_me_rank_me_t20",1446.7,22.5,34.6,1.07,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.1 AND avg_daily_liquidity > 1e6","margem_ebit DESC",20
-"ev8_mb_rank_mb",2068.9,25.6,34.6,1.15,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.2 AND avg_daily_liquidity > 1e6","margem_bruta DESC",10
-"ev8_mb_rank_mb_t20",1884.1,24.8,34.6,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.2 AND avg_daily_liquidity > 1e6","margem_bruta DESC",20
-"pl5_rank_ev",2240.8,26.3,37.5,1.14,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"pl5_rank_ev_t20",1761.4,24.2,39.4,1.08,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"ev5_rank_pl",973.1,19.2,56.7,0.84,75,55,"ev_ebit > 0 AND ev_ebit < 5 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"ev5_rank_pl_t20",1003.3,19.5,56.7,0.84,75,55,"ev_ebit > 0 AND ev_ebit < 5 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"pl5_rank_roe",1873.6,24.7,43.7,1.03,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",10
-"pl5_rank_roe_t20",1870.2,24.7,39.9,1.07,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",20
-"pl5_rank_ml",1248.5,21.3,41.0,0.95,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",10
-"pl5_rank_ml_t20",1694.9,23.8,39.9,1.03,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",20
-"pl5_rank_pvp",1496.3,22.8,36.1,0.92,60,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"pl5_rank_pvp_t20",1900.0,24.8,39.9,1.01,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
-"mid_pl8_ev8",1190.8,20.9,28.9,1.03,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mid_pl8_ev8_t20",1350.9,21.9,28.9,1.07,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"mid_ev10_roe10",1458.1,22.6,34.8,1.06,67,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"mid_ev10_roe10_t20",1320.2,21.7,34.8,1.00,67,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"notlarge_ev8",1936.5,25.0,34.6,1.13,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"notlarge_ev8_t20",1978.8,25.2,34.6,1.16,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"notlarge_pl8_ev8",2344.3,26.7,34.6,1.20,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"notlarge_pl8_ev8_t20",2263.6,26.4,34.6,1.21,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"large_ev10",117.4,5.9,39.8,0.53,65,31,"ev_ebit > 0 AND ev_ebit < 10 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"large_ev10_t20",151.5,7.1,39.8,0.60,65,31,"ev_ebit > 0 AND ev_ebit < 10 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"large_pl10_roe10",461.7,14.5,35.8,0.72,69,49,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"large_pl10_roe10_t20",477.3,14.7,35.8,0.73,71,49,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"yield_pl5_ml15",2582.2,27.6,42.1,1.12,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"yield_pl5_ml15_t20",2122.0,25.8,42.1,1.10,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"yield_pl5_ml20",1507.2,22.8,39.5,0.97,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"yield_pl5_ml20_t20",1586.3,23.3,39.5,0.97,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"yield_pl5_roe20_ml10",1218.9,21.1,48.4,0.94,70,54,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"yield_pl5_roe20_ml10_t20",1273.1,21.4,48.4,0.94,70,54,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"yield_pl8_roe15_ml10_debt2",1881.0,24.8,32.3,1.05,65,51,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"yield_pl8_roe15_ml10_debt2_t20",1743.4,24.1,32.3,1.03,65,51,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"garp_pl15_roe25_ml15",217.8,8.9,48.0,0.49,67,51,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"garp_pl15_roe25_ml15_t20",188.3,8.2,48.0,0.46,65,51,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"garp_ev15_roe20_me20",509.5,14.3,39.4,0.68,64,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.2 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"garp_ev15_roe20_me20_t20",449.6,13.5,39.4,0.67,62,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.2 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"garp_pl12_roe20_mb40_liq15",87.5,4.8,66.0,0.38,66,47,"pl_ratio > 0 AND pl_ratio < 12 AND roe > 0.2 AND margem_bruta > 0.4 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"garp_pl12_roe20_mb40_liq15_t20",73.7,4.2,66.0,0.36,66,47,"pl_ratio > 0 AND pl_ratio < 12 AND roe > 0.2 AND margem_bruta > 0.4 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"garp_ev10_roe15_ml10_liq1",1999.9,25.3,41.8,1.10,75,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"garp_ev10_roe15_ml10_liq1_t20",1448.3,22.5,41.8,1.01,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"garp_pl10_roe15_ml10_cf",2460.9,27.2,43.3,1.15,78,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"garp_pl10_roe15_ml10_cf_t20",2341.6,26.7,43.3,1.15,78,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl10_ev10_rank_roa_t20",1271.2,21.4,36.9,0.98,73,55,"ev_ebit > 0 AND ev_ebit < 10 AND roa > 0 AND avg_daily_liquidity > 1e6","roa DESC",20
+"ev8_me_rank_me",1351.0,21.9,39.6,0.99,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.1 AND avg_daily_liquidity > 1e6","margem_ebit DESC",10
+"ev8_me_rank_me_t20",1036.1,19.7,36.9,0.95,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_ebit > 0.1 AND avg_daily_liquidity > 1e6","margem_ebit DESC",20
+"ev8_mb_rank_mb",1981.8,25.2,39.8,1.11,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.2 AND avg_daily_liquidity > 1e6","margem_bruta DESC",10
+"ev8_mb_rank_mb_t20",1159.1,20.6,33.5,0.97,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND margem_bruta > 0.2 AND avg_daily_liquidity > 1e6","margem_bruta DESC",20
+"pl5_rank_ev",2268.8,26.4,37.5,1.15,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"pl5_rank_ev_t20",1427.9,22.4,38.3,1.01,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"ev5_rank_pl",2464.7,27.2,29.5,1.27,78,55,"ev_ebit > 0 AND ev_ebit < 5 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"ev5_rank_pl_t20",2466.9,27.2,24.6,1.34,76,55,"ev_ebit > 0 AND ev_ebit < 5 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"pl5_rank_roe",1768.9,24.2,43.7,1.01,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",10
+"pl5_rank_roe_t20",1424.6,22.4,37.1,0.97,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0 AND avg_daily_liquidity > 1e6","roe DESC",20
+"pl5_rank_ml",1169.0,20.7,41.0,0.92,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",10
+"pl5_rank_ml_t20",1232.0,21.1,38.6,0.92,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0 AND avg_daily_liquidity > 1e6","margem_liquida DESC",20
+"pl5_rank_pvp",1388.3,22.1,36.1,0.89,58,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
+"pl5_rank_pvp_t20",1320.8,21.7,38.6,0.90,69,55,"pl_ratio > 0 AND pl_ratio < 5 AND pvp_ratio > 0 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"mid_pl8_ev8",1413.6,22.3,38.2,1.01,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mid_pl8_ev8_t20",1530.2,23.0,38.4,1.04,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"mid_ev10_roe10",1754.7,24.1,36.7,1.09,69,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"mid_ev10_roe10_t20",1106.4,20.3,40.3,0.90,67,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.1 AND market_cap > 1e9 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"notlarge_ev8",1914.8,24.9,35.9,1.13,78,55,"ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"notlarge_ev8_t20",1547.3,23.1,35.0,1.05,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"notlarge_pl8_ev8",2202.1,26.2,35.9,1.20,78,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"notlarge_pl8_ev8_t20",1502.4,22.8,34.5,1.05,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND market_cap < 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"large_ev10",401.2,12.7,30.4,0.67,65,55,"ev_ebit > 0 AND ev_ebit < 10 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"large_ev10_t20",816.7,17.8,36.1,0.95,71,55,"ev_ebit > 0 AND ev_ebit < 10 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"large_pl10_roe10",298.4,10.8,35.4,0.59,62,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"large_pl10_roe10_t20",855.8,18.2,41.4,0.94,71,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.1 AND market_cap > 1e10 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"yield_pl5_ml15",1785.8,24.3,42.7,1.02,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"yield_pl5_ml15_t20",1119.5,20.4,41.1,0.92,65,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"yield_pl5_ml20",1498.1,22.8,41.0,1.01,69,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"yield_pl5_ml20_t20",1300.9,21.6,41.1,0.94,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND margem_liquida > 0.2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"yield_pl5_roe20_ml10",1173.8,20.7,43.7,0.92,73,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"yield_pl5_roe20_ml10_t20",1468.9,22.6,41.1,1.02,67,55,"pl_ratio > 0 AND pl_ratio < 5 AND roe > 0.2 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"yield_pl8_roe15_ml10_debt2",1389.9,22.2,25.7,1.11,71,55,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"yield_pl8_roe15_ml10_debt2_t20",1222.9,21.1,27.2,1.09,69,55,"pl_ratio > 0 AND pl_ratio < 8 AND roe > 0.15 AND margem_liquida > 0.1 AND divida_liquida_ebit > 0 AND divida_liquida_ebit < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"garp_pl15_roe25_ml15",1044.8,19.8,45.3,0.91,78,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"garp_pl15_roe25_ml15_t20",735.4,17.0,37.5,0.85,69,55,"pl_ratio > 0 AND pl_ratio < 15 AND roe > 0.25 AND margem_liquida > 0.15 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"garp_ev15_roe20_me20",1165.5,20.7,35.5,0.99,78,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.2 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"garp_ev15_roe20_me20_t20",619.4,15.7,35.7,0.81,65,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.2 AND margem_ebit > 0.2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"garp_pl12_roe20_mb40_liq15",798.3,17.7,39.5,0.84,71,55,"pl_ratio > 0 AND pl_ratio < 12 AND roe > 0.2 AND margem_bruta > 0.4 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"garp_pl12_roe20_mb40_liq15_t20",793.0,17.6,36.6,0.85,73,55,"pl_ratio > 0 AND pl_ratio < 12 AND roe > 0.2 AND margem_bruta > 0.4 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"garp_ev10_roe15_ml10_liq1",1561.7,23.1,41.9,1.04,76,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"garp_ev10_roe15_ml10_liq1_t20",1018.2,19.6,34.1,0.94,69,55,"ev_ebit > 0 AND ev_ebit < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"garp_pl10_roe15_ml10_cf",1553.8,23.1,46.4,0.99,73,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"garp_pl10_roe15_ml10_cf_t20",1072.5,20.0,38.1,0.92,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND roe > 0.15 AND margem_liquida > 0.1 AND fluxo_caixa_op_ttm > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "best_ps_ml_t5",2315.6,26.6,32.9,1.04,62,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",5
-"best_ps_ml_t10",2424.8,27.0,40.0,1.08,69,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
-"best_ps_ml_t15",2711.5,28.0,40.6,1.16,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",15
-"best_ps_ml_t20",2683.1,27.9,40.6,1.16,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
-"best_ps_ml_t30",2207.8,26.2,40.6,1.11,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",30
-"best_mf_t5",1686.2,23.8,24.6,1.04,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",5
-"best_mf_t10",2549.3,27.5,24.6,1.15,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"best_mf_t15",2481.5,27.2,24.6,1.14,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",15
-"best_mf_t20",2389.2,26.9,24.6,1.13,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"best_mf_t30",2389.2,26.9,24.6,1.13,70,53,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",30
+"best_ps_ml_t10",1713.3,23.9,40.0,0.97,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",10
+"best_ps_ml_t15",1565.7,23.2,41.1,0.98,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",15
+"best_ps_ml_t20",1374.7,22.1,40.3,0.95,64,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",20
+"best_ps_ml_t30",1137.1,20.5,41.7,0.90,67,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 1e6","price_to_sales ASC",30
+"best_mf_t5",1734.2,24.0,30.0,1.15,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",5
+"best_mf_t10",2228.5,26.3,35.9,1.19,76,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"best_mf_t15",2150.2,25.9,35.9,1.23,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",15
+"best_mf_t20",2359.8,26.8,27.0,1.29,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"best_mf_t30",1854.6,24.6,26.8,1.21,71,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",30
 "best_ev8_t5",1235.8,21.2,30.0,0.98,69,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",5
-"best_ev8_t10",1766.9,24.2,34.6,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"best_ev8_t15",2111.1,25.8,34.6,1.16,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",15
-"best_ev8_t20",1869.0,24.7,34.6,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"best_ev8_t30",1850.6,24.6,34.6,1.15,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",30
-"deep_pl2",1051.4,19.8,35.3,0.82,58,55,"pl_ratio > 0 AND pl_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"deep_pl2_t20",1626.3,23.5,35.3,0.95,60,55,"pl_ratio > 0 AND pl_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"deep_ev2",165.1,10.5,32.8,0.69,54,24,"ev_ebit > 0 AND ev_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"deep_ev2_t20",165.1,10.5,32.8,0.69,54,24,"ev_ebit > 0 AND ev_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"deep_pvp03",2259.2,26.4,40.7,0.91,65,55,"pvp_ratio > 0 AND pvp_ratio < 0.3 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
-"deep_pvp03_t20",2370.4,26.8,37.9,0.96,67,55,"pvp_ratio > 0 AND pvp_ratio < 0.3 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
-"deep_pl3_pvp05",1512.6,22.9,41.3,0.97,67,55,"pl_ratio > 0 AND pl_ratio < 3 AND pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"deep_pl3_pvp05_t20",2420.9,27.0,41.3,1.07,67,55,"pl_ratio > 0 AND pl_ratio < 3 AND pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"deep_ev3_pvp1",232.6,9.3,40.6,0.60,54,35,"ev_ebit > 0 AND ev_ebit < 3 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"deep_ev3_pvp1_t20",232.6,9.3,40.6,0.60,54,35,"ev_ebit > 0 AND ev_ebit < 3 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"deep_pl3_ev3_ml5",56.0,3.3,40.6,0.33,48,33,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"deep_pl3_ev3_ml5_t20",56.0,3.3,40.6,0.33,48,33,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"deep_pl3_ev3_roe10",236.3,9.4,37.6,0.59,59,34,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"deep_pl3_ev3_roe10_t20",236.3,9.4,37.6,0.59,59,34,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"quality_roe20_ml15_rankpl",619.1,15.7,42.2,0.76,67,55,"roe > 0.2 AND margem_liquida > 0.15 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"quality_roe20_ml15_rankpl_t20",498.9,14.2,42.2,0.70,62,55,"roe > 0.2 AND margem_liquida > 0.15 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"best_ev8_t10",1671.3,23.7,35.9,1.12,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"best_ev8_t15",2065.8,25.6,38.5,1.14,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",15
+"best_ev8_t20",1568.2,23.2,34.9,1.06,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"best_ev8_t30",1340.8,21.8,34.1,1.02,71,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 1e6","ev_ebit ASC",30
+"deep_pl2",1008.1,19.5,34.9,0.85,64,55,"pl_ratio > 0 AND pl_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"deep_pl2_t20",4460.0,32.7,27.8,1.21,69,55,"pl_ratio > 0 AND pl_ratio < 2 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"deep_ev2",3968.0,31.6,25.6,1.47,76,55,"ev_ebit > 0 AND ev_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"deep_ev2_t20",3746.9,31.0,22.5,1.49,76,55,"ev_ebit > 0 AND ev_ebit < 2 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"deep_pvp03",2111.2,25.8,40.7,0.89,62,55,"pvp_ratio > 0 AND pvp_ratio < 0.3 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",10
+"deep_pvp03_t20",1456.6,22.5,30.9,0.85,62,55,"pvp_ratio > 0 AND pvp_ratio < 0.3 AND avg_daily_liquidity > 1e6","pvp_ratio ASC",20
+"deep_pl3_pvp05",1588.5,23.3,34.9,1.01,69,55,"pl_ratio > 0 AND pl_ratio < 3 AND pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"deep_pl3_pvp05_t20",3082.5,29.2,33.3,1.19,71,55,"pl_ratio > 0 AND pl_ratio < 3 AND pvp_ratio > 0 AND pvp_ratio < 0.5 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"deep_ev3_pvp1",3395.1,30.1,28.4,1.41,76,55,"ev_ebit > 0 AND ev_ebit < 3 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"deep_ev3_pvp1_t20",3166.6,29.5,27.0,1.41,80,55,"ev_ebit > 0 AND ev_ebit < 3 AND pvp_ratio > 0 AND pvp_ratio < 1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"deep_pl3_ev3_ml5",3930.5,31.5,25.6,1.33,80,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"deep_pl3_ev3_ml5_t20",2722.2,28.1,27.0,1.32,78,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND margem_liquida > 0.05 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"deep_pl3_ev3_roe10",2722.4,28.1,28.4,1.29,71,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
+"deep_pl3_ev3_roe10_t20",2620.8,27.7,27.0,1.37,78,55,"pl_ratio > 0 AND pl_ratio < 3 AND ev_ebit > 0 AND ev_ebit < 3 AND roe > 0.1 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"quality_roe20_ml15_rankpl",609.9,15.6,42.2,0.78,71,55,"roe > 0.2 AND margem_liquida > 0.15 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"quality_roe20_ml15_rankpl_t20",696.2,16.6,39.3,0.82,65,55,"roe > 0.2 AND margem_liquida > 0.15 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "quality_roe15_mb30_rankev",887.1,18.5,39.0,0.85,65,55,"roe > 0.15 AND margem_bruta > 0.3 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"quality_roe15_mb30_rankev_t20",461.8,13.6,39.0,0.67,60,55,"roe > 0.15 AND margem_bruta > 0.3 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"quality_roa10_ml10_rankpl",448.5,13.4,40.4,0.67,69,55,"roa > 0.1 AND margem_liquida > 0.1 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"quality_roa10_ml10_rankpl_t20",372.1,12.2,41.1,0.62,65,55,"roa > 0.1 AND margem_liquida > 0.1 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"quality_roe15_mb30_rankev_t20",534.9,14.7,38.2,0.72,62,55,"roe > 0.15 AND margem_bruta > 0.3 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"quality_roa10_ml10_rankpl",499.7,14.2,40.4,0.70,67,55,"roa > 0.1 AND margem_liquida > 0.1 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"quality_roa10_ml10_rankpl_t20",503.9,14.2,38.5,0.71,69,55,"roa > 0.1 AND margem_liquida > 0.1 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
 "quality_roe15_liq15_rankev",830.1,18.0,37.2,0.87,69,55,"roe > 0.15 AND liquidez_corrente > 1.5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",10
-"quality_roe15_liq15_rankev_t20",635.2,15.9,36.5,0.79,69,55,"roe > 0.15 AND liquidez_corrente > 1.5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
-"quality_roe25_rankpl",510.0,14.3,40.3,0.72,65,55,"roe > 0.25 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
-"quality_roe25_rankpl_t20",382.7,12.4,40.9,0.64,67,55,"roe > 0.25 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
-"hiq_ps1_ml10",2015.0,25.4,40.4,1.14,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 5e6","price_to_sales ASC",10
-"hiq_ps1_ml10_t20",1864.0,24.7,40.4,1.09,71,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 5e6","price_to_sales ASC",20
-"hiq_ev8",2345.3,26.7,34.6,1.19,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
-"hiq_ev8_t20",1820.0,24.5,34.6,1.15,76,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
-"hiq_pl8_ev8",2472.2,27.2,34.6,1.20,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
-"hiq_pl8_ev8_t20",1885.9,24.8,34.6,1.16,76,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
+"quality_roe15_liq15_rankev_t20",662.9,16.2,36.7,0.80,67,55,"roe > 0.15 AND liquidez_corrente > 1.5 AND ev_ebit > 0 AND avg_daily_liquidity > 1e6","ev_ebit ASC",20
+"quality_roe25_rankpl",751.9,17.2,40.3,0.81,67,55,"roe > 0.25 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",10
+"quality_roe25_rankpl_t20",758.5,17.3,35.2,0.83,67,55,"roe > 0.25 AND pl_ratio > 0 AND avg_daily_liquidity > 1e6","pl_ratio ASC",20
+"hiq_ps1_ml10",1943.3,25.0,41.0,1.13,73,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 5e6","price_to_sales ASC",10
+"hiq_ps1_ml10_t20",1339.0,21.8,41.5,0.97,71,55,"price_to_sales > 0 AND price_to_sales < 1 AND margem_liquida > 0.1 AND avg_daily_liquidity > 5e6","price_to_sales ASC",20
+"hiq_ev8",2404.4,26.9,35.9,1.19,75,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
+"hiq_ev8_t20",1351.5,21.9,36.4,1.01,73,55,"ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
+"hiq_pl8_ev8",2664.7,27.9,35.9,1.21,75,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
+"hiq_pl8_ev8_t20",1267.7,21.4,36.0,1.00,73,55,"pl_ratio > 0 AND pl_ratio < 8 AND ev_ebit > 0 AND ev_ebit < 8 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
 "hiq_ev15_roe10",1914.1,24.9,38.9,1.08,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
-"hiq_ev15_roe10_t20",991.3,19.4,36.3,0.91,71,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
+"hiq_ev15_roe10_t20",907.0,18.7,36.7,0.89,73,55,"ev_ebit > 0 AND ev_ebit < 15 AND roe > 0.1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
 "hiq_pl10_liq15",1337.3,21.8,39.5,0.97,67,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 5e6","pl_ratio ASC",10
-"hiq_pl10_liq15_t20",974.2,19.2,41.2,0.84,65,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 5e6","pl_ratio ASC",20
-"hiq_mf_val_qual_liq",1436.0,22.4,24.6,0.88,72,50,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
-"hiq_mf_val_qual_liq_t20",1418.1,22.3,24.6,0.88,72,50,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20
+"hiq_pl10_liq15_t20",1065.7,20.0,37.0,0.89,69,55,"pl_ratio > 0 AND pl_ratio < 10 AND liquidez_corrente > 1.5 AND avg_daily_liquidity > 5e6","pl_ratio ASC",20
+"hiq_mf_val_qual_liq",2647.0,27.8,35.9,1.22,75,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",10
+"hiq_mf_val_qual_liq_t20",2402.1,26.9,27.0,1.31,78,55,"pl_ratio > 0 AND pl_ratio < 5 AND ev_ebit > 0 AND ev_ebit < 5 AND roe > 0.1 AND margem_liquida > 0.1 AND liquidez_corrente > 1 AND avg_daily_liquidity > 5e6","ev_ebit ASC",20

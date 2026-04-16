@@ -40,13 +40,14 @@ export async function parseFinancialCsv(
   if (rows.length === 0) return [];
 
   const col = Object.fromEntries(headers.map((h, i) => [h, i])) as Record<string, number>;
+  if (!("ORDEM_EXERC" in col) || !("CD_CONTA" in col)) return [];
   const hasDtIni = "DT_INI_EXERC" in col;
   const ordemIdx = col["ORDEM_EXERC"]!;
 
   const result: AccountEntry[] = [];
 
   for (const row of rows) {
-    if (row[ordemIdx]!.startsWith("PEN")) continue;
+    if (!row[ordemIdx] || row[ordemIdx]!.startsWith("PEN")) continue;
 
     const cd_conta = row[col["CD_CONTA"]!]!;
     const scale = SCALE_FACTORS[row[col["ESCALA_MOEDA"]!]!] ?? 1;

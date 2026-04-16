@@ -100,16 +100,34 @@ export async function importCvm(db: Database) {
     "DELETE FROM company_quarters WHERE source_year = ? AND source_type = ?"
   );
 
+  // Check which source_year/source_type combos are already imported
+  const imported = new Set<string>();
+  const importedRows = db
+    .query("SELECT DISTINCT source_year, source_type FROM company_quarters")
+    .all() as { source_year: number; source_type: string }[];
+  for (const r of importedRows) {
+    imported.add(`${r.source_type}|${r.source_year}`);
+  }
+
+  const currentYear = new Date().getFullYear();
+
   const dirs = readdirSync(CVM_EXTRACTED_DIR)
     .filter((d) => DIR_RE.test(d))
     .sort();
 
   let totalQuarters = 0;
+  let skipped = 0;
 
   for (const dir of dirs) {
     const match = dir.match(DIR_RE)!;
     const sourceType = match[1]!;
     const year = parseInt(match[2]!);
+
+    // Skip closed years that are already imported
+    if (year < currentYear && imported.has(`${sourceType}|${year}`)) {
+      skipped++;
+      continue;
+    }
     const dirPath = path.join(CVM_EXTRACTED_DIR, dir);
     const files = readdirSync(dirPath).filter((f) => f.endsWith(".csv"));
 
@@ -242,6 +260,6 @@ export async function importCvm(db: Database) {
     console.log(`  ${dir}: ${quarters.size} rows`);
   }
 
-  db.exec("ANALYZE");
-  console.log(`  Total: ${totalQuarters} company-quarter rows.\n`);
+  if (totalQuarters > 0) db.exec("ANALYZE");
+  console.log(`  Imported ${totalQuarters} rows (${skipped} dirs skipped, already up to date).\n`);
 }

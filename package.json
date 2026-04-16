@@ -2,7 +2,8 @@
   "name": "alphabr",
   "private": true,
   "scripts": {
-    "backfill": "bun src/backfilling/index.ts"
+    "backfill": "bun src/backfilling/index.ts",
+    "backtest": "bun src/backtest.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"

@@ -111,6 +111,60 @@ function detectShareScales(
   return factors;
 }
 
+interface MetricInput {
+  cnpj: string;
+  dt_fim_exerc: string;
+  tickerYahoo: string;
+  cur: QuarterRow;
+  ttm: TTMValues;
+  sharesOutstanding: number;
+  price: number;
+  priceDate: string;
+  return1q?: number | null;
+  returnStart?: string | null;
+  returnEnd?: string | null;
+}
+
+function buildMetricRow(m: MetricInput) {
+  const marketCap = m.sharesOutstanding * m.price;
+  const netDebt =
+    (m.cur.passivo_circulante ?? 0) +
+    (m.cur.passivo_nao_circulante ?? 0) -
+    (m.cur.caixa_equivalentes ?? 0);
+  const ev = marketCap + netDebt;
+
+  return {
+    $cnpj: m.cnpj,
+    $dt_fim_exerc: m.dt_fim_exerc,
+    $scope: "con",
+    $ticker_yahoo: m.tickerYahoo,
+    $price_close: m.price,
+    $price_date: m.priceDate,
+    $shares_outstanding: m.sharesOutstanding,
+    $market_cap: marketCap,
+    $enterprise_value: ev,
+    $receita_liquida_ttm: m.ttm.receita_liquida,
+    $resultado_bruto_ttm: m.ttm.resultado_bruto,
+    $ebit_ttm: m.ttm.ebit,
+    $lucro_liquido_ttm: m.ttm.lucro_liquido,
+    $fluxo_caixa_op_ttm: m.ttm.fluxo_caixa_operacional,
+    $pl_ratio: safeDiv(marketCap, m.ttm.lucro_liquido),
+    $pvp_ratio: safeDiv(marketCap, m.cur.patrimonio_liquido),
+    $ev_ebit: safeDiv(ev, m.ttm.ebit),
+    $price_to_sales: safeDiv(marketCap, m.ttm.receita_liquida),
+    $roe: safeDiv(m.ttm.lucro_liquido, m.cur.patrimonio_liquido),
+    $roa: safeDiv(m.ttm.lucro_liquido, m.cur.ativo_total),
+    $margem_liquida: safeDiv(m.ttm.lucro_liquido, m.ttm.receita_liquida),
+    $margem_bruta: safeDiv(m.ttm.resultado_bruto, m.ttm.receita_liquida),
+    $margem_ebit: safeDiv(m.ttm.ebit, m.ttm.receita_liquida),
+    $liquidez_corrente: safeDiv(m.cur.ativo_circulante, m.cur.passivo_circulante),
+    $divida_liquida_ebit: m.ttm.ebit && m.ttm.ebit > 0 ? netDebt / m.ttm.ebit : null,
+    $return_1q: m.return1q ?? null,
+    $return_date_start: m.returnStart ?? null,
+    $return_date_end: m.returnEnd ?? null,
+  };
+}
+
 export async function computeMetrics(db: Database) {
   console.log("[6/6] Computing financial metrics...");
 
@@ -162,6 +216,12 @@ export async function computeMetrics(db: Database) {
      WHERE ticker_yahoo = ? AND date >= ? AND adjusted_close IS NOT NULL
      ORDER BY date ASC LIMIT 1`
   );
+  // Latest price per ticker (for "current" snapshot)
+  const latestPriceStmt = db.prepare(
+    `SELECT date, adjusted_close FROM daily_prices
+     WHERE ticker_yahoo = ? AND adjusted_close IS NOT NULL
+     ORDER BY date DESC LIMIT 1`
+  );
 
   const insertMetric = db.prepare(`
     INSERT OR REPLACE INTO company_metrics (
@@ -187,89 +247,75 @@ export async function computeMetrics(db: Database) {
 
   db.exec("DELETE FROM company_metrics");
   let count = 0;
+  let currentCount = 0;
 
   db.transaction(() => {
     for (const [cnpj, companyQuarters] of byCnpj) {
       const tickerYahoo = tickerMap.get(cnpj);
       if (!tickerYahoo) continue;
 
+      const scaleFactor = shareScaleFactors.get(cnpj) ?? 1;
+      const lastIdx = companyQuarters.length - 1;
+
       for (let idx = 0; idx < companyQuarters.length; idx++) {
         const cur = companyQuarters[idx]!;
         const dt_fim_exerc = cur.dt_fim_exerc;
         if (!cur.shares_outstanding || cur.shares_outstanding <= 0) continue;
 
-      const scaleFactor = shareScaleFactors.get(cnpj) ?? 1;
-      const sharesOutstanding = cur.shares_outstanding * scaleFactor;
-      const ttm = computeTTM(companyQuarters, idx);
+        const sharesOutstanding = cur.shares_outstanding * scaleFactor;
+        const ttm = computeTTM(companyQuarters, idx);
 
-      const priceRow = priceStmt.get(tickerYahoo, dt_fim_exerc) as {
-        date: string;
-        adjusted_close: number;
-      } | null;
-      if (!priceRow) continue;
+        // Historical metric: price at quarter-end
+        const priceRow = priceStmt.get(tickerYahoo, dt_fim_exerc) as {
+          date: string;
+          adjusted_close: number;
+        } | null;
+        if (!priceRow) continue;
 
-      const price = priceRow.adjusted_close;
-      const marketCap = sharesOutstanding * price;
-      const netDebt =
-        (cur.passivo_circulante ?? 0) +
-        (cur.passivo_nao_circulante ?? 0) -
-        (cur.caixa_equivalentes ?? 0);
-      const ev = marketCap + netDebt;
+        // Forward 1-quarter return
+        let return1q: number | null = null;
+        let returnStart: string | null = null;
+        let returnEnd: string | null = null;
 
-      // Forward 1-quarter return
-      let return1q: number | null = null;
-      let returnStart: string | null = null;
-      let returnEnd: string | null = null;
+        const nextQEnd = addMonths(dt_fim_exerc, 3);
+        const startPrice = fwdPriceStmt.get(tickerYahoo, dt_fim_exerc) as {
+          date: string;
+          adjusted_close: number;
+        } | null;
+        const endPrice = priceStmt.get(tickerYahoo, nextQEnd) as {
+          date: string;
+          adjusted_close: number;
+        } | null;
 
-      const nextQEnd = addMonths(dt_fim_exerc, 3);
-      const startPrice = fwdPriceStmt.get(tickerYahoo, dt_fim_exerc) as {
-        date: string;
-        adjusted_close: number;
-      } | null;
-      const endPrice = priceStmt.get(tickerYahoo, nextQEnd) as {
-        date: string;
-        adjusted_close: number;
-      } | null;
+        if (startPrice && endPrice && startPrice.adjusted_close > 0) {
+          return1q =
+            (endPrice.adjusted_close - startPrice.adjusted_close) /
+            startPrice.adjusted_close;
+          returnStart = startPrice.date;
+          returnEnd = endPrice.date;
+        }
 
-      if (startPrice && endPrice && startPrice.adjusted_close > 0) {
-        return1q =
-          (endPrice.adjusted_close - startPrice.adjusted_close) /
-          startPrice.adjusted_close;
-        returnStart = startPrice.date;
-        returnEnd = endPrice.date;
-      }
+        insertMetric.run(buildMetricRow({
+          cnpj, dt_fim_exerc, tickerYahoo, cur, ttm, sharesOutstanding,
+          price: priceRow.adjusted_close, priceDate: priceRow.date,
+          return1q, returnStart, returnEnd,
+        }));
+        count++;
 
-      insertMetric.run({
-        $cnpj: cnpj,
-        $dt_fim_exerc: dt_fim_exerc,
-        $scope: "con",
-        $ticker_yahoo: tickerYahoo,
-        $price_close: price,
-        $price_date: priceRow.date,
-        $shares_outstanding: sharesOutstanding,
-        $market_cap: marketCap,
-        $enterprise_value: ev,
-        $receita_liquida_ttm: ttm.receita_liquida,
-        $resultado_bruto_ttm: ttm.resultado_bruto,
-        $ebit_ttm: ttm.ebit,
-        $lucro_liquido_ttm: ttm.lucro_liquido,
-        $fluxo_caixa_op_ttm: ttm.fluxo_caixa_operacional,
-        $pl_ratio: safeDiv(marketCap, ttm.lucro_liquido),
-        $pvp_ratio: safeDiv(marketCap, cur.patrimonio_liquido),
-        $ev_ebit: safeDiv(ev, ttm.ebit),
-        $price_to_sales: safeDiv(marketCap, ttm.receita_liquida),
-        $roe: safeDiv(ttm.lucro_liquido, cur.patrimonio_liquido),
-        $roa: safeDiv(ttm.lucro_liquido, cur.ativo_total),
-        $margem_liquida: safeDiv(ttm.lucro_liquido, ttm.receita_liquida),
-        $margem_bruta: safeDiv(ttm.resultado_bruto, ttm.receita_liquida),
-        $margem_ebit: safeDiv(ttm.ebit, ttm.receita_liquida),
-        $liquidez_corrente: safeDiv(cur.ativo_circulante, cur.passivo_circulante),
-        $divida_liquida_ebit: ttm.ebit && ttm.ebit > 0 ? netDebt / ttm.ebit : null,
-        $return_1q: return1q,
-        $return_date_start: returnStart,
-        $return_date_end: returnEnd,
-      });
-      count++;
+        // "current" snapshot: latest quarter's financials + today's price
+        if (idx === lastIdx) {
+          const latestPrice = latestPriceStmt.get(tickerYahoo) as {
+            date: string;
+            adjusted_close: number;
+          } | null;
+          if (latestPrice && latestPrice.date > priceRow.date) {
+            insertMetric.run(buildMetricRow({
+              cnpj, dt_fim_exerc: "current", tickerYahoo, cur, ttm, sharesOutstanding,
+              price: latestPrice.adjusted_close, priceDate: latestPrice.date,
+            }));
+            currentCount++;
+          }
+        }
       }
     }
   })();
@@ -281,12 +327,13 @@ export async function computeMetrics(db: Database) {
       `SELECT COUNT(DISTINCT cnpj) as companies,
               MIN(dt_fim_exerc) as min_date, MAX(dt_fim_exerc) as max_date,
               COUNT(pl_ratio) as has_pl, COUNT(return_1q) as has_return
-       FROM company_metrics`
+       FROM company_metrics WHERE dt_fim_exerc != 'current'`
     )
     .get() as any;
 
   console.log(
-    `  ${count} metrics for ${stats.companies} companies (${stats.min_date} to ${stats.max_date}).`
+    `  ${count} historical metrics for ${stats.companies} companies (${stats.min_date} to ${stats.max_date}).`
   );
-  console.log(`  ${stats.has_pl} with P/L, ${stats.has_return} with forward returns.\n`);
+  console.log(`  ${stats.has_pl} with P/L, ${stats.has_return} with forward returns.`);
+  console.log(`  ${currentCount} current screening snapshots.\n`);
 }

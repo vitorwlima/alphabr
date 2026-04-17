@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "backfill": "bun src/backfilling/index.ts",
-    "backtest": "bun src/backtest.ts"
+    "backtest": "bun src/backtest.ts",
+    "dev:server": "bun --hot src/server.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
